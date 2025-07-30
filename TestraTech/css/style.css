@@ -1,0 +1,81 @@
+/* Base */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f7f7f7; /* White */
+	color: #333;
+}
+
+/* Header */
+.header {
+	background-color: #1F4E79; /* Dark Blue */
+	color: white;
+	padding: 1rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo-container {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	height: 50px;
+	margin-right: 10px;
+}
+
+.brand-name {
+	font-size: 1.5rem;
+}
+
+nav a {
+	color: white;
+	margin-left: 20px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+	padding: 3rem 2rem;
+	text-align: center;
+	background-color: #e0eaf1; /* Light Gray */
+}
+
+.hero h2 {
+	font-size: 2rem;
+	color: #1F4E79; /* Dark Blue */
+	margin-bottom: 1rem;
+}
+
+/* Generic Content Sections */
+.section {
+	padding: 2rem;
+	max-width: 900px;
+	margin: auto;
+}
+
+.section h3 {
+	color: #1F4E79; /* Dark Blue */
+	margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+	background-color: #1F4E79; /* Dark Blue */
+	color: white;
+	text-align: center;
+	padding: 1rem;
+	margin-top: 2rem;
+}
