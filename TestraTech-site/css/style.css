@@ -62,8 +62,12 @@ nav a:hover {
 /* Generic Content Sections */
 .section {
 	padding: 2rem;
-	max-width: 900px;
 	margin: auto;
+}
+
+/* D&A Home Section */
+#da-home-section {
+	background-color: aqua;
 }
 
 /* IT Home Section */
