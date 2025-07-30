@@ -63,6 +63,7 @@ nav a:hover {
 .section {
 	padding: 2rem;
 	margin: auto;
+	justify-content: center;
 }
 
 /* D&A Home Section */
