@@ -66,6 +66,11 @@ nav a:hover {
 	margin: auto;
 }
 
+/* D&A Home Section */
+#it-home-section {
+	background-color: aqua;
+}
+
 .section h3 {
 	color: #1F4E79; /* Dark Blue */
 	margin-bottom: 1rem;
