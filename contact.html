@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Testra - Contact</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/logoCircle.png" type="image/png" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="img/logoCircle.png" alt="Testra" class="brand-logo">
+      <span class="brand-name">Testra</span>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Home</a>|
+      <a href="testing.html">D&A Testing</a>|
+      <a href="training.html">Computer Training</a>|
+      <a href="support.html">IT Support</a>
+      <a href="contact.html" class="btn btn--sm" id="navContactBtn">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Contact form section -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section__title">Send us a Message</h2>
+      <form id="contactForm" class="form" novalidate>
+        <!-- honeypot -->
+        <input type="text" name="website" class="hp" autocomplete="off" tabindex="-1" aria-hidden="true">
+
+        <div class="form-row inline">
+          <div>
+            <label for="name">Your Name</label>
+            <input id="name" name="name" placeholder="Jane Doe" required autocomplete="name">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="jane@example.com" required autocomplete="email">
+          </div>
+        </div>
+
+        <div class="form-row inline">
+          <div>
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" name="phone" type="tel" placeholder="(555) 123-4567" autocomplete="tel">
+          </div>
+          <div>
+            <label for="topic">Subject</label>
+            <select id="topic" name="topic" required>
+              <option value="" selected disabled>Select one…</option>
+              <option>Drug & Alcohol Testing</option>
+              <option>Computer Training</option>
+              <option>IT Support</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+          <div class="help">We reply as soon as possible. Your info is kept confidential.</div>
+        </div>
+
+        <div class="form-row">
+          <button type="submit" class="btn" id="sendBtn">Send Message</button>
+          <div id="formStatus" class="status" role="status" aria-live="polite"></div>
+        </div>
+      </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <p>© <span id="year"></span> Testra</p>
+    <nav class="footer__menu">
+      <a href="index.html">Home</a>|
+      <a href="testing.html">D&A Testing</a>|
+      <a href="training.html">Computer Training</a>|
+      <a href="support.html">IT Support</a>|
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const form = document.getElementById('contactForm');
+  const statusEl = document.getElementById('formStatus');
+  const sendBtn = document.getElementById('sendBtn');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (form.website && form.website.value.trim() !== '') return;
+
+    if (!form.reportValidity()) return;
+
+    sendBtn.disabled = true;
+    statusEl.textContent = 'Message sent! (demo)';
+    statusEl.classList.add('show', 'ok');
+
+    setTimeout(() => {
+      form.reset();
+      statusEl.classList.remove('show', 'ok');
+      sendBtn.disabled = false;
+    }, 3000);
+  });
+</script>
+
+</body>
+</html>

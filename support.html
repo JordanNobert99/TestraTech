@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Testra - IT Support</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/logoCircle.png" type="image/png" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="img/logoCircle.png" alt="Testra" class="brand-logo">
+      <span class="brand-name">Testra</span>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Home</a>|
+      <a href="testing.html">D&A Testing</a>|
+      <a href="training.html">Computer Training</a>|
+      <a href="support.html" class="active">IT Support</a>
+      <a href="contact.html" class="btn btn--sm" id="navContactBtn">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <h1>Reliable IT Support</h1>
+      <p class="lead">On-site and remote help for homes and small businesses—fast, friendly, and straightforward.</p>
+      <div class="hero__cta">
+        <a href="#it-services" class="btn btn--dark btn--lg">See Support Options</a>
+      </div>
+    </div>
+    <div class="hero__art" aria-hidden="true">
+      <div class="orb"></div><div class="orb orb--2"></div><div class="orb orb--3"></div>
+    </div>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,48 C240,120 480,0 720,48 C960,96 1200,96 1440,48 L1440,120 L0,120 Z"></path>
+  </svg>
+  <svg class="wave flipped" viewBox="0 0 1440 110" preserveAspectRatio="none">
+    <path d="M0,48 C240,120 480,0 720,48 C960,96 1200,96 1440,48 L1440,110 L0,110 Z"></path>
+  </svg>
+</section>
+
+<section id="it-services" class="section">
+  <div class="container">
+    <h2 class="section__title">Services</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Setup &amp; Install</h3>
+        <ul class="list">
+          <li>New PCs, laptops, printers</li>
+          <li>Wi-Fi &amp; networking</li>
+          <li>Data transfer &amp; backups</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Troubleshooting</h3>
+        <ul class="list">
+          <li>Performance &amp; cleanup</li>
+          <li>Software errors</li>
+          <li>Email &amp; browser issues</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Web &amp; Software Help</h3>
+        <ul class="list">
+          <li>Website updates</li>
+          <li>Accounts &amp; security</li>
+          <li>Basic automations</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Remote or On-Site</h3>
+        <ul class="list">
+          <li>Quick remote sessions</li>
+          <li>Home &amp; office visits</li>
+          <li>After-hours by request</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">Get Support</h2>
+    <div class="card">
+      <p>Tell us what you need help with and we’ll suggest the fastest, most affordable option.</p>
+      <a href="contact.html" class="btn">Request Support</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <p>© <span id="year"></span> Testra</p>
+    <nav class="footer__menu">
+      <a href="index.html">Home</a>|
+      <a href="testing.html">D&A Testing</a>|
+      <a href="training.html">Computer Training</a>|
+      <a href="support.html" class="active">IT Support</a>|
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
